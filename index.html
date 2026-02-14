@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bloons Clone TD</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="hud" aria-label="Informações do jogo">
+        <h1>Bloons Clone TD</h1>
+        <div class="stats">
+          <p>💰 Moedas: <span id="money">120</span></p>
+          <p>❤️ Vidas: <span id="lives">20</span></p>
+          <p>🌊 Onda: <span id="wave">0</span></p>
+          <p>🎯 Inimigos: <span id="remaining">0</span></p>
+        </div>
+        <div class="buttons">
+          <button id="startWaveBtn">Iniciar onda</button>
+          <button id="infiniteModeBtn">Modo infinito: OFF</button>
+          <button id="buildModeBtn">Construir torre (50)</button>
+          <button id="speedBtn">Velocidade x1</button>
+        </div>
+        <p class="hint">
+          Clique/toque no campo para posicionar torres. Proteja a saída da trilha!
+        </p>
+      </section>
+
+      <section class="game-area">
+        <canvas id="gameCanvas" width="960" height="540" aria-label="Campo do jogo"></canvas>
+        <div id="toast" role="status" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <script src="game.js"></script>
+  </body>
+</html>
